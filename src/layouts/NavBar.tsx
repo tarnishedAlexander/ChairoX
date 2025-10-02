@@ -59,7 +59,7 @@ const Navbar = () => {
               textTransform: "uppercase",
             }}
           >
-            ChairoX
+            ChairuX
           </Typography>
         </Box>
 

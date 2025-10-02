@@ -20,8 +20,7 @@ export const Herramientas = () => {
     react: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
     typescript: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
     postgres: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg',
-    mui: 'https://mui.com/static/logo.png',
-    dns: 'https://cdn-icons-png.flaticon.com/512/1183/1183697.png'
+    neolo: 'https://logo.clearbit.com/neolo.com'
   };
 
   const LogoComponent = (name: string, logoKey: string) => (
@@ -79,11 +78,8 @@ export const Herramientas = () => {
             {LogoComponent('Postgres', 'postgres')}
             <p>Postgres: Base de datos relacional de código abierto, escalable y confiable para el almacenamiento de usuarios, cursos y contenidos.</p>
             
-            {LogoComponent('MuiCore', 'mui')}
-            <p>MuiCore (Material-UI): Biblioteca de componentes React basada en Material Design para una interfaz moderna y consistente.</p>
-            
-            {LogoComponent('Servicio Local DNS', 'dns')}
-            <p>Servicio Local DNS: Solución para resolución de nombres de dominio local, asegurando conectividad segura y eficiente en entornos internos.</p>
+            {LogoComponent('Neolo', 'neolo')}
+            <p>Neolo: Hosting boliviano con soporte para alto tráfico, disponibilidad mínima del 99.9% y políticas de backup diarias.</p>
           </div>
         }
       />
