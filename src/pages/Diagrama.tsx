@@ -21,16 +21,16 @@ export const Diagrama = () => {
           <svg width="1200" height="600" viewBox="0 0 1200 600">
             <defs>
               <marker
-                id="arrow"
-                markerWidth="10"
-                markerHeight="10"
-                refX="9"
-                refY="3"
-                orient="auto"
-                markerUnits="strokeWidth"
-              >
-                <path d="M0,0 L0,6 L9,3 z" fill="#000" />
-              </marker>
+              id="arrow"
+              markerWidth="10"
+              markerHeight="10"
+              refX="9"
+              refY="3"
+              orient="auto"
+              markerUnits="strokeWidth"
+            >
+              <path d="M0,0 L0,6 L9,3 z" fill="#0e0d0dff" /> {/* Cambiado a blanco */}
+            </marker>
             </defs>
 
             {/* Nodes */}

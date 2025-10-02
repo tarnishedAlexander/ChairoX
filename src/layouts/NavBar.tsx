@@ -11,7 +11,6 @@ import {
   Tooltip,
 } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useState } from "react";
 
 const navItems = [
@@ -44,7 +43,12 @@ const Navbar = () => {
       position="fixed"
       color="default"
       elevation={1}
-      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, bgcolor: "#fff" }}
+      sx={{
+        zIndex: (theme) => theme.zIndex.drawer + 1,
+        bgcolor: "rgba(255,255,255,0.85)", // Fondo blanco semitransparente
+        backdropFilter: "blur(8px)",       // Difumina el fondo animado
+        boxShadow: 2,
+      }}
     >
       <Toolbar sx={{ gap: 2 }}>
         {/* Logo */}
@@ -89,24 +93,34 @@ const Navbar = () => {
 
         {/* Navegación */}
         <Box sx={{ flexGrow: 1, display: "flex", gap: 1 }}>
-          {navItems.map((item) => (
-            <Button
-              key={item.path}
-              component={Link}
-              to={item.path}
-              color={location.pathname === item.path ? "primary" : "inherit"}
-              sx={{
-                fontWeight: location.pathname === item.path ? "bold" : "normal",
-                borderBottom: location.pathname === item.path ? "2px solid #1976d2" : "none",
-                borderRadius: 0,
-                textTransform: "none",
-                fontSize: 16,
-              }}
-            >
-              {item.label}
-            </Button>
-          ))}
-        </Box>
+  {navItems.map((item) => (
+    <Button
+      key={item.path}
+      component={Link}
+      to={item.path}
+      color={location.pathname === item.path ? "primary" : "inherit"}
+      sx={{
+        fontWeight: location.pathname === item.path ? 700 : 500,
+        borderBottom: location.pathname === item.path ? "2.5px solid #1976d2" : "2.5px solid transparent",
+        borderRadius: 0,
+        textTransform: "capitalize",
+        fontSize: 17,
+        letterSpacing: 0.5,
+        px: 2,
+        py: 1.2,
+        transition: "all 0.2s",
+        color: location.pathname === item.path ? "#1976d2" : "#222",
+        "&:hover": {
+          background: "rgba(25, 118, 210, 0.07)",
+          color: "#1976d2",
+          borderBottom: "2.5px solid #1976d2",
+        },
+      }}
+    >
+      {item.label}
+    </Button>
+  ))}
+</Box>
 
         {/* Íconos de acciones */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
