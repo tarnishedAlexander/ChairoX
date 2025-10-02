@@ -11,22 +11,24 @@ import { Diagrama } from "../pages/Diagrama";
 import { ManualUsuario } from "../pages/ManualUsuario";
 import { ManualSistema } from "../pages/ManualSistema";
 import { Entrevistas } from "../pages/Entrevistas";
-
+import { DbDiagram } from "../pages/dbdiagram";
 
 export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="home" element={< Home />} />
+          <Route path="home" element={<Home />} />
           <Route path="cursos" element={<Cursos />} />
           <Route path="mis-cursos" element={<MisCursos />} />
           <Route path="perfil" element={<Perfil />} />
           <Route path="login" element={<Login />} />
           <Route path="herramientas" element={<Herramientas />} />
-                  
-          <Route path="bitacora" element={<Bitacora/>} />
+
+          <Route path="bitacora" element={<Bitacora />} />
           <Route path="diagrama" element={<Diagrama />} />
+          <Route path="dbdiagram" element={<DbDiagram />} />
+
           <Route path="entrevistas" element={<Entrevistas />} />
           <Route path="manual-usuario" element={<ManualUsuario />} />
           <Route path="manual-sistema" element={<ManualSistema />} />
@@ -34,4 +36,4 @@ export const AppRoutes = () => {
       </Routes>
     </BrowserRouter>
   );
-}
+};
