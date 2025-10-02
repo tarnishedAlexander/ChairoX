@@ -4,16 +4,13 @@ import {
   Button,
   Box,
   Typography,
-  InputBase,
   IconButton,
   Avatar,
   Menu,
   MenuItem,
   Tooltip,
-  Paper,
 } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useState } from "react";
 
@@ -22,6 +19,13 @@ const navItems = [
   { label: "Carta de aceptación", path: "/mis-cursos" },
   { label: "Riesgos", path: "/cursos" },
   { label: "Pruebas y Control de calidad", path: "/perfil" },
+  { label: "Herramientas para la fase de planificación", path: "/herramientas" },
+  //Alex links:
+  { label: "Bitacora", path: "/bitacora" },
+  { label: "Diagrama", path: "/diagrama" },
+  { label: "Entrevistas", path: "/entrevistas" },
+  { label: "Manual de usuario", path: "/manual-usuario" },
+  { label: "Manual del sistema", path: "/manual-sistema" },
 ];
 
 const Navbar = () => {
@@ -60,7 +64,7 @@ const Navbar = () => {
         </Box>
 
         {/* Barra de búsqueda */}
-        <Paper
+        {/* <Paper
           component="form"
           sx={{
             p: "2px 8px",
@@ -81,7 +85,7 @@ const Navbar = () => {
           <IconButton type="submit" sx={{ p: "6px" }} aria-label="search">
             <SearchIcon color="primary" />
           </IconButton>
-        </Paper>
+        </Paper> */}
 
         {/* Navegación */}
         <Box sx={{ flexGrow: 1, display: "flex", gap: 1 }}>
@@ -106,11 +110,11 @@ const Navbar = () => {
 
         {/* Íconos de acciones */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <Tooltip title="Notificaciones">
+          {/* <Tooltip title="Notificaciones">
             <IconButton>
               <NotificationsIcon color="action" />
             </IconButton>
-          </Tooltip>
+          </Tooltip> */}
           {/* Menú de usuario */}
           <Tooltip title="Perfil">
             <IconButton onClick={handleMenuOpen} sx={{ p: 0 }}>
